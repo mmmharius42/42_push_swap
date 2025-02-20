@@ -6,11 +6,11 @@
 /*   By: mpapin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 15:52:28 by mpapin            #+#    #+#             */
-/*   Updated: 2025/02/20 02:01:22 by mpapin           ###   ########.fr       */
+/*   Updated: 2025/02/20 02:25:51 by mpapin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "push_swap.h"
 
 void	r_stacks(t_stack_node **a, t_stack_node **b, t_stack_node *cheapest)
 {

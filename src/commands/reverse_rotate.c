@@ -6,11 +6,11 @@
 /*   By: mpapin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 01:54:00 by mpapin            #+#    #+#             */
-/*   Updated: 2025/02/20 01:54:52 by mpapin           ###   ########.fr       */
+/*   Updated: 2025/02/20 02:24:55 by mpapin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "push_swap.h"
 
 void	reverse_rotate(t_stack_node **stack)
 {

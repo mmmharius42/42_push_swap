@@ -6,11 +6,11 @@
 /*   By: mpapin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 18:34:43 by mpapin            #+#    #+#             */
-/*   Updated: 2025/02/20 01:56:57 by mpapin           ###   ########.fr       */
+/*   Updated: 2025/02/20 02:25:15 by mpapin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 void	append_node(t_stack_node **stack, int nbr)
 {

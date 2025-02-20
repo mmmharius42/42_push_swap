@@ -6,12 +6,11 @@
 /*   By: mpapin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 21:32:27 by mpapin            #+#    #+#             */
-/*   Updated: 2025/02/20 01:54:50 by mpapin           ###   ########.fr       */
+/*   Updated: 2025/02/20 02:24:53 by mpapin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include "../../push_swap.h"
+#include "push_swap.h"
 
 void	rotate(t_stack_node **stack)
 {
