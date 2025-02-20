@@ -6,11 +6,11 @@
 /*   By: mpapin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 12:35:29 by mpapin            #+#    #+#             */
-/*   Updated: 2025/02/20 02:21:48 by mpapin           ###   ########.fr       */
+/*   Updated: 2025/02/20 02:30:41 by mpapin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 int	check_digit(char *s)
 {

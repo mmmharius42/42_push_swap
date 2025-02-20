@@ -6,11 +6,11 @@
 /*   By: mpapin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 19:56:12 by mpapin            #+#    #+#             */
-/*   Updated: 2025/02/20 01:57:18 by mpapin           ###   ########.fr       */
+/*   Updated: 2025/02/20 02:31:17 by mpapin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 t_stack_node	*get_highest(t_stack_node *stack)
 {
