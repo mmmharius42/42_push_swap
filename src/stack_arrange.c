@@ -6,7 +6,7 @@
 /*   By: mpapin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 21:32:27 by mpapin            #+#    #+#             */
-/*   Updated: 2025/02/20 02:25:12 by mpapin           ###   ########.fr       */
+/*   Updated: 2025/03/24 15:44:08 by mpapin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,19 +83,29 @@ void	set_target(t_stack_node *a, t_stack_node *b)
 void	set_cheapest(t_stack_node *b)
 {
 	t_stack_node	*best_node;
+	t_stack_node	*current;
 	long			best_val;
 
 	if (b == NULL)
 		return ;
 	best_val = LONG_MAX;
-	while (b)
+	best_node = NULL;
+	current = b;
+	while (current)
 	{
-		if (b->push_price < best_val)
-		{
-			best_val = b->push_price;
-			best_node = b;
-		}
-		b = b->next;
+		current->cheapest = 0;
+		current = current->next;
 	}
-	best_node->cheapest = 1;
+	current = b;
+	while (current)
+	{
+		if (current->push_price < best_val)
+		{
+			best_val = current->push_price;
+			best_node = current;
+		}
+		current = current->next;
+	}
+	if (best_node != NULL)
+		best_node->cheapest = 1;
 }

@@ -6,7 +6,7 @@
 /*   By: mpapin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 12:53:28 by mpapin            #+#    #+#             */
-/*   Updated: 2025/02/20 01:55:37 by mpapin           ###   ########.fr       */
+/*   Updated: 2025/03/24 15:34:12 by mpapin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	main(int argc, char **argv)
 	b = NULL;
 	(void) b;
 	if (argc < 2)
-		return (ft_printf("\n"), 1);
+		return (1);
 	argv_splited = (argc == 2);
 	if (argv_splited)
 		argv = ft_split(argv[1], ' ');

@@ -6,43 +6,52 @@
 /*   By: mpapin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 15:58:27 by mpapin            #+#    #+#             */
-/*   Updated: 2025/01/25 17:05:40 by mpapin           ###   ########.fr       */
+/*   Updated: 2025/03/24 15:57:40 by mpapin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libs.h"
+#include <limits.h>
+
+static int	skipable(char c)
+{
+	if (c == ' ' || (c >= 9 && c <= 13))
+		return (1);
+	return (0);
+}
+
+static void	set_sign(char c, int *sign)
+{
+	if (c == '-' || c == '+')
+	{
+		if (c == '-')
+			*sign *= -1;
+	}
+}
 
 int	ft_atoi(const char *str)
 {
-	int		nbr;
+	long	res;
+	int		i;
 	int		sign;
-	size_t	i;
 
-	nbr = 0;
-	sign = 1;
+	res = 0;
 	i = 0;
-	while (str[i] == ' ' || ('\t' <= str[i] && str[i] <= '\r'))
+	sign = 1;
+	while (skipable(str[i]))
 		i++;
-	if (str[i] == '+')
+	set_sign(str[i], &sign);
+	if (str[i] == '-' || str[i] == '+')
 		i++;
-	else if (str[i] == '-')
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		sign *= -1;
+		res = res * 10 + (str[i] - '0');
 		i++;
 	}
-	while ('0' <= str[i] && str[i] <= '9')
-	{
-		nbr = nbr * 10 + str[i] - '0';
-		i++;
-	}
-	return (nbr * sign);
+	res = res * sign;
+	if (res > INT_MAX)
+		return (INT_MAX);
+	if (res < INT_MIN)
+		return (INT_MIN);
+	return ((int) res);
 }
-
-// int	main(void)
-// {
-// 	const char *test = "   -12345";
-
-// 	printf("%d\n", ft_atoi(test));
-
-// 	return (0);
-// }
