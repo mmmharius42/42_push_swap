@@ -6,7 +6,7 @@
 /*   By: mpapin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 21:32:27 by mpapin            #+#    #+#             */
-/*   Updated: 2025/03/24 15:44:08 by mpapin           ###   ########.fr       */
+/*   Updated: 2025/03/24 17:08:54 by mpapin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,11 +94,6 @@ void	set_cheapest(t_stack_node *b)
 	while (current)
 	{
 		current->cheapest = 0;
-		current = current->next;
-	}
-	current = b;
-	while (current)
-	{
 		if (current->push_price < best_val)
 		{
 			best_val = current->push_price;
